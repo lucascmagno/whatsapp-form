@@ -12,22 +12,22 @@
         <p>Obs.: Preencha corretamente todos os dados com atenção para não errar.</p>
         <form id="formulario">
             <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome" required pattern="^[a-zA-Z\s]+$" title="Use apenas letras e espaços.">
 
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" required>
+            <input type="tel" id="telefone" name="telefone" required pattern="^\d{11}$" title="O telefone deve conter 11 dígitos numéricos.">
 
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" required>
+            <input type="text" id="cpf" name="cpf" required pattern="^\d{11}$" title="O CPF deve conter 11 dígitos numéricos.">
 
             <label for="cnpj">CNPJ:</label>
-            <input type="text" id="cnpj" name="cnpj" required>
+            <input type="text" id="cnpj" name="cnpj" pattern="^\d{14}$" title="O CNPJ deve conter 14 dígitos numéricos.">
 
             <label for="dataNascimento">Data de Nascimento:</label>
             <input type="date" id="dataNascimento" name="dataNascimento" required>
 
             <label for="nomeMae">Nome da Mãe:</label>
-            <input type="text" id="nomeMae" name="nomeMae" required>
+            <input type="text" id="nomeMae" name="nomeMae" required pattern="^[a-zA-Z\s]+$" title="Use apenas letras e espaços.">
 
             <label for="nomeEstabelecimento">Nome do Estabelecimento:</label>
             <input type="text" id="nomeEstabelecimento" name="nomeEstabelecimento" required>
@@ -39,7 +39,7 @@
             <input type="email" id="email" name="email" required>
 
             <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" required onblur="buscarCep()">
+            <input type="text" id="cep" name="cep" required pattern="^\d{8}$" title="O CEP deve conter 8 dígitos numéricos." onblur="buscarCep()">
 
             <label for="bairro">Bairro:</label>
             <input type="text" id="bairro" name="bairro" required>
@@ -48,7 +48,7 @@
             <input type="text" id="endereco" name="endereco" required>
 
             <label for="numero">Número:</label>
-            <input type="text" id="numero" name="numero" required>
+            <input type="text" id="numero" name="numero" required pattern="^\d+$" title="Use apenas dígitos numéricos.">
 
             <button type="submit">Enviar</button>
         </form>
