@@ -42,7 +42,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     var endereco = document.getElementById('endereco').value;
     var numero = document.getElementById('numero').value;
 
-    var texto = `*ABERTURA DE CONTA*\n*Nome Completo:* ${nome}\n*Telefone:* ${telefone}\n*CPF: ${cpf}\nCNPJ:* ${cnpj}\n*Data de Nascimento:* ${dataNascimento}\n*Nome da Mãe:* ${nomeMae}\n*Nome do Estabelecimento:* ${nomeEstabelecimento}\n*Ramo de Atuação Profissional:* ${ramoAtuacao}\n*Email:* ${email}\nCEP: ${cep}\nBairro: ${bairro}\n*Endereço:* ${endereco}\n*Número:* ${numero}`;
+    var texto = `*ABERTURA DE CONTA*\n*NOME COMPLETO:* ${nome}\n*TELEFONE:* ${telefone}\n*CPF:* ${cpf}\n*CNPJ:* ${cnpj}\n*DATA DE NASCIMENTO:* ${dataNascimento}\n*NOME DA MÃE:* ${nomeMae}\n*NOME DO ESTABELECIMENTO:* ${nomeEstabelecimento}\n*RAMO DE ATUAÇÃO PROFISSIONAL:* ${ramoAtuacao}\n*EMAIL:* ${email}\nCEP: ${cep}\nBAIRRO: ${bairro}\n*ENDEREÇO:* ${endereco}\n*NÚMERO:* ${numero}`;
 
     var numeroWhatsApp = '5591982869577'; // Usei o número fornecido
     var url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
